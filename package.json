@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "rm -rf ./dist/ && tsc",
-    "server": "cross-env NODE_ENV=production FORCE_COLOR=1 node ./dist/index.js",
-    "start": "yarn build && yarn server",
-    "dev": "cross-env NODE_ENV=develop FORCE_COLOR=1 nodemon -L -e ts --exec 'node --nolazy --inspect=0.0.0.0:9232 --require ts-node/register ./index.ts'",
+    "start": "yarn build && yarn dev",
+    "dev": "nodemon -L -e ts --exec 'node --nolazy --inspect=0.0.0.0:9232 --require ts-node/register ./index.ts'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Juhyeon Jeong",
