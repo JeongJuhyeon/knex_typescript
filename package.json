@@ -1,0 +1,31 @@
+{
+  "name": "knex_typescript",
+  "version": "1.0.0",
+  "description": "Knex+Typescript sample project",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf ./dist/ && tsc",
+    "server": "cross-env NODE_ENV=production FORCE_COLOR=1 node ./dist/index.js",
+    "start": "yarn build && yarn server",
+    "dev": "cross-env NODE_ENV=develop FORCE_COLOR=1 nodemon -L -e ts --exec 'node --nolazy --inspect=0.0.0.0:9232 --require ts-node/register ./index.ts'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Juhyeon Jeong",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@tsconfig/node14": "^1.0.0",
+    "@types/node": "^14.14.37",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "knex": "^0.95.4",
+    "ms": "^2.1.2",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.1.2",
+    "sqlite3": "^5.0.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
+  }
+}
